@@ -6,6 +6,11 @@
 </head>
 <body>
 <h1 th:text="${planetInfos.name}">$name</h1>
+<ul>
+    <li th:each="film : ${planetInfos.films}">
+        <a th:href="${film}" th:text="${film}">$film</a>
+    </li>
+</ul>
 <h3 th:text="${planetInfos.population}">$population</h3>
 <a href="/">Go back</a>
 </body>
