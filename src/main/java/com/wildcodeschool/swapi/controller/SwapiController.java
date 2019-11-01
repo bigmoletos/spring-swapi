@@ -24,17 +24,18 @@ public class SwapiController {
 	}
 
 	@GetMapping("/planet")
-	public String planet(Model model, @RequestParam(required = true, defaultValue = "1") Long id) {
+//	public String planet(Model model, @RequestParam(required = true, defaultValue = "1") Long id) {
+	public String planet(Model model, @RequestParam Long id) {
 
 		Planet planetObject = null;
 
 		model.addAttribute("planetInfos", planetObject);
 //		on cherche à avoir http://localhost:8080/planet?id=1 d'où -> uriBuilder.path("/planet/{id}/").build(id)
 		WebClient webClient = WebClient.create(SWAPI_URL);
-		Mono<String> call = webClient.get().uri(uriBuilder -> uriBuilder.path("/planet/{id}/").build(id)).retrieve()
+		Mono<String> callPla = webClient.get().uri(uriBuilder -> uriBuilder.path("/planets/{id}/").build(id)).retrieve()
 				.bodyToMono(String.class);
 
-		String response = call.block();
+		String response = callPla.block();
 
 		ObjectMapper objectMapper = new ObjectMapper();
 //		Planet planetObject = null;

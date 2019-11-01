@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>The Star Wars API - Planet</title>
+    <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-<h1 th:text="${planetInfos.name}">$name</h1>
+<h1>Nom planète</h1><h1 th:text="${planetInfos.name}">$name</h1>
+<h3>Nombre d'habitants</h3><h3 th:text="${planetInfos.population}">$population</h3>
+<h2>Résidents</h2>
 <ul>
-    <li th:each="film : ${planetInfos.films}">
-        <a th:href="${film}" th:text="${film}">$film</a>
+    <li th:each="residents : ${planetInfos.residents}">
+        <a th:href="${residents}" th:text="${residents}">$residents</a>
     </li>
 </ul>
-<h3 th:text="${planetInfos.population}">$population</h3>
+
+<h2>Films</h2>
+<ul>
+    <li th:each="films : ${planetInfos.films}">
+        <a th:href="${films}" th:text="${films}">$films</a>
+    </li>
+</ul>
+<h3>date création</h3><h3 th:text="${planetInfos.created}">$created</h3>
+<h3>Url</h3><h3 th:text="${planetInfos.url}">$url</h3>
 <a href="/">Go back</a>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

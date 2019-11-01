@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+<html class="text-nowrap">
+
 <head>
-    <meta charset="UTF-8">
-    <title>The Star Wars API - Choose Your Destiny</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>index</title>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
 <body>
-<h1>The Star Wars API</h1>
-<h2>You can search:</h2>
-<h3>People:</h3>
-<form action="/people" method="get">
-    <label>People id:</label>
-    <input name="id" placeholder="1" required type="number">
-    <input type="submit" value="Send">
-</form>
-<h3>Planet:</h3>
-<form action="/planet" method="get">
-    <label>Planet id:</label>
-    <input name="id" placeholder="1" required type="number">
-    <input type="submit" value="Send">
-</form>
+	<!-- Start: Login Form Dark -->
+	<div class="login-dark">
+		<h1
+			class="text-capitalize text-center d-block justify-content-center align-items-center">The
+			Star Wars Api</h1>
+		<h2 class="text-left">You can search :</h2>
+		<section>
+			<form class="d-inline" id="form" method="get" action="/people">
+				<div class="form-group d-inline" id="group_people">
+					<aside>
+					<label>People by id<input class="form-control" type="text"
+						id="id" placeholder="1" name="id"></label>
+						<button
+							class="btn btn-primary active btn-block btn-sm text-nowrap text-capitalize text-center"
+							id="sendPeople" type="submit">Send</button>
+					</aside>
+				</div>
+			</form>
+			<form class="d-inline" id="form" method="get" action="/planet">
+				<div class="form-group d-inline" id="group_planet">
+					<aside>
+					<label>Planet by id<input class="form-control" type="text"
+						id="id" placeholder="1" name="id"></label>
+						<button
+							class="btn btn-primary active btn-block btn-sm text-nowrap text-capitalize text-center"
+							id="sendPlanet" type="submit">Send</button>
+					</aside>
+				</div>
+			</form>
+		</section>
+	</div>
+	<!-- End: Login Form Dark -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

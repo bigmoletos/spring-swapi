@@ -1,46 +1,8 @@
 package com.wildcodeschool.swapi.model;
 
-import java.time.LocalDate;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Planet {
-//	 "name": "Tatooine", 
-//	    "rotation_period": "23", 
-//	    "orbital_period": "304", 
-//	    "diameter": "10465", 
-//	    "climate": "arid", 
-//	    "gravity": "1 standard", 
-//	    "terrain": "desert", 
-//	    "surface_water": "1", 
-//	    "population": "200000", 
-//	    "residents": [] "https://swapi.co/api/people/1/", 
-//	    "films":   []     "https://swapi.co/api/films/5/", 
-//	    "created": "2014-12-09T13:50:49.641000Z", 
-//	    "edited": "2014-12-21T20:48:04.175778Z", 
-//	    "url": "https://swapi.co/api/planets/1/"
-
-//	private String name;
-//	private String rotation_period;
-//	private String mass;
-//	@JsonProperty("hair_color")
-//	private String hairColor;
-//	@JsonProperty("skin_color")
-//	private String skinColor;
-//	@JsonProperty("eye_color")
-//	private String eyeColor;
-//	@JsonProperty("birth_year")
-//	private String birthYear;
-//	private String gender;
-//	private String homeworld;
-//	private String[] films;
-//	private String[] species;
-//	private String[] vehicles;
-//	private String[] starships;
-//	private String created;
-//	private String edited;
-//	private String url;
-
 	private String name;
 	@JsonProperty("rotation_period")
 	private String rotationPeriod;
@@ -55,12 +17,12 @@ public class Planet {
 	private String population;
 	private String[] residents;
 	private String[] films;
-	private LocalDate created;
-	private LocalDate edited;
+	private String created;
+	private String edited;
 	private String url;
 
 	// TODO : add an empty constructor
-	private void planet() {
+	public void planet() {
 
 	}
 	// TODO : add getters and setters
@@ -222,28 +184,28 @@ public class Planet {
 	/**
 	 * @return the created
 	 */
-	public LocalDate getCreated() {
+	public String getCreated() {
 		return this.created;
 	}
 
 	/**
 	 * @param created the created to set
 	 */
-	public void setCreated(LocalDate created) {
+	public void setCreated(String created) {
 		this.created = created;
 	}
 
 	/**
 	 * @return the edited
 	 */
-	public LocalDate getEdited() {
+	public String getEdited() {
 		return this.edited;
 	}
 
 	/**
 	 * @param edited the edited to set
 	 */
-	public void setEdited(LocalDate edited) {
+	public void setEdited(String edited) {
 		this.edited = edited;
 	}
 
