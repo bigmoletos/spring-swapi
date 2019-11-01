@@ -24,8 +24,8 @@ public class SwapiController {
 	}
 
 	@GetMapping("/planet")
-//	public String planet(Model model, @RequestParam(required = true, defaultValue = "1") Long id) {
-	public String planet(Model model, @RequestParam Long id) {
+	public String planet(Model model, @RequestParam(required = true, defaultValue = "1") Long id) {
+//	public String planet(Model model, @RequestParam Long id) {
 
 		Planet planetObject = null;
 
@@ -51,7 +51,7 @@ public class SwapiController {
 	}
 
 	@GetMapping("/people")
-	public String people(Model model, @RequestParam Long id) {
+	public String people(Model model, @RequestParam(required = true, defaultValue = "1") Long id) {
 
 		WebClient webClient = WebClient.create(SWAPI_URL);
 		Mono<String> call = webClient.get().uri(uriBuilder -> uriBuilder.path("/people/{id}/").build(id)).retrieve()
